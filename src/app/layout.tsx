@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,6 +13,12 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   title: "Sayan Dutta | MERN Stack & Next.js Developer",
@@ -57,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark scroll-smooth`}>
-      <body className="min-h-screen bg-[#07090e] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark scroll-smooth overflow-x-clip w-full max-w-full`}>
+      <body className="min-h-screen bg-[#07090e] text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white overflow-x-clip w-full max-w-full relative">
         {children}
       </body>
     </html>

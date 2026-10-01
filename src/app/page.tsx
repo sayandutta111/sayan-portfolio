@@ -16,7 +16,7 @@ export default function Home() {
   const [resumeOpen, setResumeOpen] = useState(false);
 
   return (
-    <main className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-indigo-500 selection:text-white">
+    <main className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-indigo-500 selection:text-white w-full max-w-full overflow-x-clip">
       {/* Top Fixed Navigation */}
       <Navbar onOpenResume={() => setResumeOpen(true)} />
 

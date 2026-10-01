@@ -41,29 +41,29 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 w-full max-w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#07090e]/85 backdrop-blur-md border-b border-white/10 shadow-2xl shadow-black/40 py-3"
-          : "bg-transparent py-5"
+          ? "bg-[#07090e]/85 backdrop-blur-md border-b border-white/10 shadow-2xl shadow-black/40 py-2.5 sm:py-3"
+          : "bg-transparent py-3 sm:py-5"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 w-full">
+        <div className="flex items-center justify-between gap-3">
           {/* Logo */}
           <a
             href="#"
-            className="flex items-center gap-3 group"
+            className="flex items-center gap-2.5 sm:gap-3 group min-w-0"
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-purple-600 shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-all">
-              <span className="font-mono font-black text-sm text-white tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            <div className="relative flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-indigo-600 to-purple-600 shadow-lg shadow-cyan-500/25 group-hover:scale-105 transition-all shrink-0">
+              <span className="font-mono font-black text-xs sm:text-sm text-white tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 SD
               </span>
             </div>
-            <div>
-              <span className="font-semibold tracking-tight text-white group-hover:text-cyan-400 transition-colors block text-base leading-none">
+            <div className="min-w-0">
+              <span className="font-semibold tracking-tight text-white group-hover:text-cyan-400 transition-colors block text-sm sm:text-base leading-none truncate">
                 {PORTFOLIO_DATA.personal.name}
               </span>
-              <span className="text-[11px] font-mono text-slate-400 block mt-1">
+              <span className="text-[10px] sm:text-[11px] font-mono text-slate-400 block mt-1 truncate">
                 MERN & Next.js Engineer
               </span>
             </div>
@@ -83,7 +83,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
           </nav>
 
           {/* Right Action Buttons */}
-          <div className="hidden sm:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3 shrink-0">
             <button
               onClick={onOpenResume}
               className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg text-xs font-medium text-slate-200 bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-white/20 transition-all cursor-pointer"
@@ -104,7 +104,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
           {/* Mobile menu trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-white/[0.05] border border-white/10 text-slate-300 hover:text-white transition-colors cursor-pointer"
+            className="lg:hidden w-10 h-10 min-w-[40px] min-h-[40px] flex items-center justify-center rounded-xl bg-white/[0.05] border border-white/10 text-slate-300 hover:text-white transition-colors cursor-pointer shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
@@ -114,7 +114,7 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] max-h-[calc(100vh-70px)] overflow-y-auto bg-[#07090e]/95 backdrop-blur-2xl border-b border-white/10 p-5 sm:p-6 shadow-2xl transition-all z-50">
+        <div className="lg:hidden fixed inset-x-0 top-[56px] sm:top-[65px] w-full max-w-full max-h-[calc(100vh-60px)] overflow-y-auto bg-[#07090e]/95 backdrop-blur-2xl border-b border-white/10 p-4 sm:p-6 shadow-2xl transition-all z-50">
           <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <a

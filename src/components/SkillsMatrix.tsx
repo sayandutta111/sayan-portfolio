@@ -63,11 +63,11 @@ export default function SkillsMatrix() {
   const currentCategory = PORTFOLIO_DATA.skills[activeCategoryIndex];
 
   return (
-    <section id="skills" className="py-16 sm:py-20 lg:py-24 relative">
+    <section id="skills" className="py-16 sm:py-20 lg:py-24 relative overflow-x-clip overflow-y-hidden w-full max-w-full">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-purple-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] max-w-full h-[300px] bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0 max-w-full">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">

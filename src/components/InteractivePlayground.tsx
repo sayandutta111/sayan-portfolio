@@ -317,12 +317,12 @@ export default function InteractivePlayground() {
   };
 
   return (
-    <section id="playground" className="py-20 lg:py-20 relative">
+    <section id="playground" className="py-16 sm:py-20 lg:py-20 relative overflow-x-clip overflow-y-hidden w-full max-w-full">
       {/* Decorative ambient background */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-cyan-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-10 w-96 h-96 bg-purple-600/10 rounded-full blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 max-w-full bg-cyan-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10" />
+      <div className="absolute top-1/3 right-4 sm:right-10 w-64 sm:w-96 h-64 sm:h-96 max-w-full bg-purple-600/10 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full min-w-0 max-w-full">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono font-medium mb-4">
@@ -380,7 +380,7 @@ export default function InteractivePlayground() {
         </div>
 
         {activeTab === "pixelgpt" && (
-          <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl w-full min-w-0 max-w-full overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/[0.08] mb-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center text-white shadow-md shadow-cyan-500/20 shrink-0">
@@ -497,7 +497,7 @@ export default function InteractivePlayground() {
         )}
 
         {activeTab === "crm" && (
-          <div className="max-w-5xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl">
+          <div className="max-w-5xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl w-full min-w-0 max-w-full overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-white/[0.08] mb-5">
               <div>
                 <h3 className="text-base font-semibold text-white flex items-center gap-2">
@@ -656,7 +656,7 @@ export default function InteractivePlayground() {
         )}
 
         {activeTab === "fitmitra" && (
-          <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl w-full min-w-0 max-w-full overflow-hidden">
             <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-5 sm:mb-6">
               <div>
                 <h3 className="text-base font-semibold text-white flex items-center gap-2">

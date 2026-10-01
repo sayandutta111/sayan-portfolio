@@ -18,13 +18,19 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
 }
 
 body {
   background-color: #07090e;
   color: #f1f5f9;
   font-family: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   selection-background-color: #6366f1;
   selection-color: #ffffff;
 }

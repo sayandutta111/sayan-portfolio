@@ -41,31 +41,31 @@ export const engineer = {
   };
 
   return (
-    <section id="about" className="relative min-h-screen pt-24 pb-12 sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24 flex items-center justify-center overflow-hidden">
+    <section id="about" className="relative min-h-screen pt-20 pb-12 sm:pt-28 sm:pb-16 lg:pt-36 lg:pb-24 flex items-center justify-center overflow-x-clip overflow-y-hidden w-full max-w-full">
       {/* Background Decorative Ambient Glows */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] h-[250px] sm:h-[350px] bg-gradient-to-tr from-cyan-600/20 via-indigo-600/20 to-purple-600/20 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10 animate-glow-pulse" />
-      <div className="absolute top-10 left-5 sm:left-10 w-48 sm:w-72 h-48 sm:h-72 bg-cyan-500/10 rounded-full blur-[80px] sm:blur-[100px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-5 sm:right-10 w-52 sm:w-80 h-52 sm:h-80 bg-indigo-500/10 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] max-w-full h-[220px] sm:h-[350px] bg-gradient-to-tr from-cyan-600/20 via-indigo-600/20 to-purple-600/20 rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -z-10 animate-glow-pulse" />
+      <div className="absolute top-10 left-5 sm:left-10 w-40 sm:w-72 h-40 sm:h-72 max-w-full bg-cyan-500/10 rounded-full blur-[70px] sm:blur-[100px] pointer-events-none -z-10" />
+      <div className="absolute bottom-10 right-5 sm:right-10 w-40 sm:w-80 h-40 sm:h-80 max-w-full bg-indigo-500/10 rounded-full blur-[80px] sm:blur-[120px] pointer-events-none -z-10" />
 
       {/* Grid Pattern overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-8 items-center w-full min-w-0 max-w-full">
 
           {/* Left Column: Headline and Pitch */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left">
+          <div className="lg:col-span-7 flex flex-col items-start text-left w-full min-w-0 max-w-full">
             {/* Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] sm:text-xs font-mono font-medium mb-5 sm:mb-6 shadow-sm shadow-emerald-500/10 max-w-full">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-medium mb-4 sm:mb-6 shadow-sm shadow-emerald-500/10 max-w-full flex-wrap">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span className="leading-tight">Open for MERN & Next.js Roles (Remote / Hybrid / On-site)</span>
+              <span className="leading-tight break-words">Open for MERN & Next.js Roles (Remote / Hybrid / On-site)</span>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.14] mb-5 sm:mb-6">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.18] sm:leading-[1.14] mb-4 sm:mb-6 break-words max-w-full">
               Engineering Resilient{" "}
               <span className="text-gradient-cyan">
                 MERN & Next.js
@@ -74,46 +74,46 @@ export const engineer = {
             </h1>
 
             {/* Bio summary */}
-            <p className="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-8">
+            <p className="text-slate-300 text-xs sm:text-base lg:text-lg leading-relaxed max-w-2xl mb-6 sm:mb-8 break-words">
               Hi, I&apos;m <strong className="text-white font-semibold">{PORTFOLIO_DATA.personal.name}</strong> — a full-stack engineer with{" "}
               <span className="text-cyan-400 font-medium">4+ years of production experience</span> building scalable CRMs, real-time AI chat applications, high-performance dashboards, and secure role-based portals across React, Next.js, Node.js, and MongoDB.
             </p>
 
             {/* Primary Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto mb-8 sm:mb-10">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 w-full sm:w-auto mb-7 sm:mb-10 max-w-full">
               <a
                 href="#projects"
-                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 hover:from-cyan-400 hover:to-indigo-500 shadow-xl shadow-indigo-600/30 hover:shadow-cyan-500/40 transition-all cursor-pointer group"
+                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-semibold text-white bg-gradient-to-r from-cyan-500 via-indigo-600 to-purple-600 hover:from-cyan-400 hover:to-indigo-500 shadow-xl shadow-indigo-600/30 hover:shadow-cyan-500/40 transition-all cursor-pointer group"
               >
                 <span>Explore Featured Work</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform shrink-0" />
               </a>
 
               <a
                 href="#playground"
-                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-slate-200 bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-cyan-500/40 transition-all cursor-pointer group"
+                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-200 bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-cyan-500/40 transition-all cursor-pointer group"
               >
-                <Play className="w-4 h-4 text-cyan-400 fill-cyan-400/20 group-hover:scale-110 transition-transform" />
+                <Play className="w-4 h-4 text-cyan-400 fill-cyan-400/20 group-hover:scale-110 transition-transform shrink-0" />
                 <span>Interactive Demos</span>
               </a>
 
               <button
                 onClick={onOpenResume}
-                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold text-slate-300 hover:text-white bg-transparent hover:bg-white/[0.04] border border-dashed border-white/20 hover:border-white/40 transition-all cursor-pointer"
+                className="w-full sm:w-auto min-h-[44px] inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold text-slate-300 hover:text-white bg-transparent hover:bg-white/[0.04] border border-dashed border-white/20 hover:border-white/40 transition-all cursor-pointer"
               >
-                <Download className="w-4 h-4 text-slate-400" />
+                <Download className="w-4 h-4 text-slate-400 shrink-0" />
                 <span>CV / Resume</span>
               </button>
             </div>
 
             {/* Key Metric Counters */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full pt-6 border-t border-white/[0.08]">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full min-w-0 max-w-full pt-5 sm:pt-6 border-t border-white/[0.08]">
               {PORTFOLIO_DATA.personal.stats.map((stat, idx) => (
-                <div key={idx} className="flex flex-col">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400 font-mono">
+                <div key={idx} className="flex flex-col min-w-0">
+                  <span className="text-xl sm:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400 font-mono truncate">
                     {stat.value}
                   </span>
-                  <span className="text-[11px] sm:text-xs text-slate-400 font-medium mt-0.5">
+                  <span className="text-[10px] sm:text-xs text-slate-400 font-medium mt-0.5 truncate">
                     {stat.label}
                   </span>
                 </div>
@@ -122,10 +122,10 @@ export const engineer = {
           </div>
 
           {/* Right Column: Visual Avatar + Tech Badge Ecosystem + Terminal Preview */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center relative w-full">
+          <div className="lg:col-span-5 flex flex-col items-center justify-center relative w-full min-w-0 max-w-full">
 
             {/* Avatar & Floating Tech Badges Card */}
-            <div className="relative w-full max-w-sm sm:max-w-md mx-auto">
+            <div className="relative w-full max-w-xs sm:max-w-md mx-auto min-w-0">
 
               {/* Glowing Aura Ring */}
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-indigo-500 to-purple-600 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-1000 -z-10 animate-glow-pulse" />
@@ -200,7 +200,7 @@ export const engineer = {
             </div>
 
             {/* Quick Interactive Snippet Box underneath */}
-            <div className="w-full max-w-sm sm:max-w-md mt-5 sm:mt-6 rounded-2xl glass-panel-subtle p-3 sm:p-3.5 border border-white/[0.08] relative">
+            <div className="w-full max-w-xs sm:max-w-md mt-5 sm:mt-6 rounded-2xl glass-panel-subtle p-3 sm:p-3.5 border border-white/[0.08] relative min-w-0 max-w-full overflow-hidden">
               <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/[0.08]">
                 <div className="flex items-center gap-2">
                   <Terminal className="w-3.5 h-3.5 text-cyan-400" />
@@ -224,7 +224,7 @@ export const engineer = {
                   )}
                 </button>
               </div>
-              <pre className="text-[10px] sm:text-[11px] font-mono text-slate-300 leading-relaxed overflow-x-auto p-1">
+              <pre className="text-[10px] sm:text-[11px] font-mono text-slate-300 leading-relaxed overflow-x-auto p-1 max-w-full">
                 <code>{snippet}</code>
               </pre>
             </div>
