@@ -378,7 +378,7 @@ export const PORTFOLIO_DATA = {
       id: "pixel-solutionz",
       role: "Application Developer",
       company: "Pixel Solutionz",
-      period: "04/2026 – 11/09/2026 (4+ Years Total Track Record)",
+      period: "01/2023 – 09/2026 (3 Yrs 9 Mos)",
       location: "Kolkata, India",
       type: "Full-Time",
       description:

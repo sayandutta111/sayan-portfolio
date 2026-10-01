@@ -164,7 +164,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               <div>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs font-mono font-semibold">
                   <span className="text-white text-sm">Application Developer — Pixel Solutionz</span>
-                  <span className="text-cyan-400">04/2026 – Present (4+ Yrs Track Record)</span>
+                  <span className="text-cyan-400">01/2023 – 09/2026 (3 Yrs 9 Mos)</span>
                 </div>
                 <div className="text-[11px] text-slate-400 font-mono mt-0.5 mb-2">
                   Tech: MongoDB, Express.js, React.js, Next.js, Node.js, JavaScript, TypeScript, REST APIs, JWT, NextAuth, Zustand, SWR
