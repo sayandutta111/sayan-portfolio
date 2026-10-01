@@ -395,8 +395,8 @@ export default function InteractivePlayground() {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-2 self-start sm:self-auto">
-                <span className="flex h-2 w-2 rounded-full bg-emerald-500" />
+              <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
+                <span className="flex h-2 w-2 rounded-full bg-emerald-500 shrink-0" />
                 <span className="text-[11px] font-mono text-emerald-400">
                   Stream Ready
                 </span>

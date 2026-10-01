@@ -56,12 +56,12 @@ export const engineer = {
           {/* Left Column: Headline and Pitch */}
           <div className="lg:col-span-7 flex flex-col items-start text-left w-full min-w-0 max-w-full">
             {/* Availability Pill */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-medium mb-4 sm:mb-6 shadow-sm shadow-emerald-500/10 max-w-full flex-wrap">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-xs font-mono font-medium mb-4 sm:mb-6 shadow-sm shadow-emerald-500/10 max-w-full">
               <span className="relative flex h-2 w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span className="leading-tight break-words">Open for MERN & Next.js Roles (Remote / Hybrid / On-site)</span>
+              <span className="leading-tight min-w-0">Open for MERN & Next.js Roles (Remote / Hybrid / On-site)</span>
             </div>
 
             {/* Main Headline */}
@@ -150,7 +150,7 @@ export const engineer = {
                       <div className="text-[10px] sm:text-[11px] text-cyan-400 font-mono">Pixel Solutionz • 4+ Yrs</div>
                     </div>
                     <div className="flex items-center gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md bg-white/[0.08] text-[10px] sm:text-[11px] font-mono text-slate-300 shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0" />
                       Kolkata, IN
                     </div>
                   </div>

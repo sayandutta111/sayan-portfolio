@@ -157,8 +157,8 @@ export default function ContactSection() {
                   <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
                   <span>Kolkata, West Bengal, India</span>
                 </div>
-                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-mono text-emerald-400 self-start sm:self-auto">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-mono text-emerald-400 self-start sm:self-auto shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping shrink-0" />
                   <span>IST (UTC+5:30)</span>
                 </div>
               </div>
