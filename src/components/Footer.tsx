@@ -32,19 +32,19 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400">
-            <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
-            <a href="#experience" className="hover:text-cyan-400 transition-colors">Experience</a>
-            <a href="#projects" className="hover:text-cyan-400 transition-colors">Projects</a>
-            <a href="#playground" className="hover:text-cyan-400 transition-colors">Interactive Demos</a>
-            <a href="#skills" className="hover:text-cyan-400 transition-colors">Skills</a>
-            <a href="#contact" className="hover:text-cyan-400 transition-colors">Contact</a>
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2.5 text-xs text-slate-400">
+            <a href="#about" className="hover:text-cyan-400 transition-colors py-1">About</a>
+            <a href="#experience" className="hover:text-cyan-400 transition-colors py-1">Experience</a>
+            <a href="#projects" className="hover:text-cyan-400 transition-colors py-1">Projects</a>
+            <a href="#playground" className="hover:text-cyan-400 transition-colors py-1">Interactive Demos</a>
+            <a href="#skills" className="hover:text-cyan-400 transition-colors py-1">Skills</a>
+            <a href="#contact" className="hover:text-cyan-400 transition-colors py-1">Contact</a>
           </div>
 
           {/* Back to top button */}
           <button
             onClick={scrollToTop}
-            className="p-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer flex items-center gap-2 text-xs"
+            className="min-h-[40px] px-3.5 py-2 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 text-slate-300 hover:text-white transition-all cursor-pointer flex items-center gap-2 text-xs"
             title="Scroll to Top"
           >
             <span>Back to top</span>

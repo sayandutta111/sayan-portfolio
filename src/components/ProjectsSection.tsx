@@ -49,14 +49,14 @@ export default function ProjectsSection() {
           </div>
 
           {/* Filter Pills */}
-          <div className="flex flex-wrap gap-2 p-1.5 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-md self-start md:self-auto">
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 p-1 sm:p-1.5 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-md self-start md:self-auto w-full md:w-auto">
             {categories.map((cat) => {
               const count = cat === "All" ? PORTFOLIO_DATA.projects.length : PORTFOLIO_DATA.projects.filter((p) => p.category === cat).length;
               return (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${selectedCategory === cat
+                  className={`px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 cursor-pointer ${selectedCategory === cat
                     ? "bg-indigo-600 text-white shadow-lg shadow-indigo-600/30"
                     : "text-slate-400 hover:text-white hover:bg-white/[0.05]"
                     }`}
@@ -72,7 +72,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Project Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -105,25 +105,25 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Card Body */}
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+                <div className="p-4 sm:p-5">
+                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </h3>
                   <p className="text-xs text-slate-400 font-medium mt-1 line-clamp-1">
                     {project.subtitle}
                   </p>
-                  <p className="text-xs text-slate-300 mt-3 line-clamp-3 leading-relaxed">
+                  <p className="text-xs text-slate-300 mt-2.5 line-clamp-3 leading-relaxed">
                     {project.summary}
                   </p>
 
                   {/* Metrics Row */}
-                  <div className="grid grid-cols-3 gap-2 mt-4 pt-3 border-t border-white/[0.06]">
+                  <div className="grid grid-cols-3 gap-1.5 sm:gap-2 mt-3.5 pt-3 border-t border-white/[0.06]">
                     {project.metrics.map((metric, mIdx) => (
                       <div key={mIdx} className="flex flex-col">
                         <span className="text-[10px] text-slate-500 font-mono uppercase tracking-wider">
                           {metric.label}
                         </span>
-                        <span className="text-xs font-bold text-slate-200 font-mono mt-0.5">
+                        <span className="text-[11px] sm:text-xs font-bold text-slate-200 font-mono mt-0.5">
                           {metric.value}
                         </span>
                       </div>
@@ -131,17 +131,17 @@ export default function ProjectsSection() {
                   </div>
 
                   {/* Tech Tags */}
-                  <div className="flex flex-wrap gap-1.5 mt-4">
+                  <div className="flex flex-wrap gap-1.5 mt-3.5">
                     {project.tech.slice(0, 4).map((t, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-slate-300"
+                        className="px-2 py-0.5 rounded-md bg-white/[0.04] border border-white/[0.08] text-[10px] sm:text-[11px] font-mono text-slate-300"
                       >
                         {t}
                       </span>
                     ))}
                     {project.tech.length > 4 && (
-                      <span className="px-2 py-0.5 rounded-md bg-white/[0.04] text-[11px] font-mono text-slate-500">
+                      <span className="px-2 py-0.5 rounded-md bg-white/[0.04] text-[10px] sm:text-[11px] font-mono text-slate-500">
                         +{project.tech.length - 4} more
                       </span>
                     )}
@@ -150,10 +150,10 @@ export default function ProjectsSection() {
               </div>
 
               {/* Card Footer / Deep Dive Button */}
-              <div className="p-5 pt-0">
+              <div className="p-4 sm:p-5 pt-0">
                 <button
                   onClick={() => setActiveModalProject(project)}
-                  className="w-full py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-cyan-500/40 text-xs font-semibold text-slate-200 hover:text-white flex items-center justify-center gap-2 transition-all cursor-pointer group/btn"
+                  className="w-full min-h-[40px] py-2.5 px-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-cyan-500/40 text-xs font-semibold text-slate-200 hover:text-white flex items-center justify-center gap-2 transition-all cursor-pointer group/btn"
                 >
                   <span>View System Architecture</span>
                   <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -165,20 +165,20 @@ export default function ProjectsSection() {
 
         {/* Modal: Deep Dive Architecture & Engineering Details */}
         {activeModalProject && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
-            <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-3xl glass-panel border border-white/20 p-6 sm:p-8 shadow-2xl bg-[#090d16]/95">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 md:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+            <div className="relative w-full max-w-3xl max-h-[88vh] sm:max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl glass-panel border border-white/20 p-4 sm:p-6 sm:p-8 shadow-2xl bg-[#090d16]/98">
 
               {/* Close Button */}
               <button
                 onClick={() => setActiveModalProject(null)}
-                className="absolute top-5 right-5 p-2 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-slate-400 hover:text-white transition-colors cursor-pointer"
+                className="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 p-2 rounded-full bg-white/[0.06] hover:bg-white/[0.12] text-slate-400 hover:text-white transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
               </button>
 
               {/* Modal Header */}
-              <div className="pr-10 mb-6">
+              <div className="pr-8 sm:pr-10 mb-4 sm:mb-6">
                 <div className="flex flex-wrap items-center gap-2 mb-2">
                   <span className="px-2.5 py-0.5 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-xs font-mono text-cyan-400">
                     {activeModalProject.category}

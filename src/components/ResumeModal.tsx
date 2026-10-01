@@ -40,22 +40,22 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-3xl glass-panel border border-white/20 p-6 sm:p-10 shadow-2xl bg-[#090d16]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2.5 sm:p-4 md:p-6 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto rounded-2xl sm:rounded-3xl glass-panel border border-white/20 p-4 sm:p-6 sm:p-10 shadow-2xl bg-[#090d16]">
         
         {/* Floating Top Action Bar */}
-        <div className="sticky top-0 -mt-2 -mx-2 mb-6 p-3 rounded-2xl bg-[#07090e]/90 backdrop-blur-md border border-white/10 flex items-center justify-between z-10">
+        <div className="sticky top-0 -mt-1 -mx-1 sm:-mt-2 sm:-mx-2 mb-4 sm:mb-6 p-2.5 sm:p-3 rounded-xl sm:rounded-2xl bg-[#07090e]/95 backdrop-blur-md border border-white/10 flex items-center justify-between z-10">
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-xs font-mono font-medium text-slate-300">
-              Verified Curriculum Vitae • {PORTFOLIO_DATA.personal.name}
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+            <span className="text-[11px] sm:text-xs font-mono font-medium text-slate-300 truncate">
+              Verified CV • {PORTFOLIO_DATA.personal.name}
             </span>
           </div>
 
           <div className="flex items-center gap-2">
             <button
               onClick={handlePrint}
-              className="px-3 py-1.5 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="px-2.5 sm:px-3 py-1.5 rounded-lg bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 text-xs text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer"
               title="Print Resume"
             >
               <Printer className="w-3.5 h-3.5 text-cyan-400" />
@@ -64,7 +64,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
 
             <button
               onClick={onClose}
-              className="p-1.5 rounded-lg bg-white/[0.05] hover:bg-white/[0.12] text-slate-400 hover:text-white transition-colors cursor-pointer"
+              className="min-w-[36px] min-h-[36px] flex items-center justify-center rounded-lg bg-white/[0.05] hover:bg-white/[0.12] text-slate-400 hover:text-white transition-colors cursor-pointer"
               aria-label="Close resume preview"
             >
               <X className="w-5 h-5" />
@@ -73,19 +73,19 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
         </div>
 
         {/* Printable Resume Document Container */}
-        <div className="bg-[#0b0f19] p-6 sm:p-8 rounded-2xl border border-white/[0.08] text-slate-200 text-xs sm:text-sm font-sans space-y-8">
+        <div className="bg-[#0b0f19] p-4 sm:p-8 rounded-xl sm:rounded-2xl border border-white/[0.08] text-slate-200 text-xs sm:text-sm font-sans space-y-6 sm:space-y-8">
           
           {/* Header with Avatar */}
-          <div className="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div className="border-b border-white/10 pb-5 sm:pb-6 flex flex-col-reverse sm:flex-row sm:items-center justify-between gap-4 sm:gap-6">
             <div className="flex-1">
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              <h2 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight">
                 {PORTFOLIO_DATA.personal.name.toUpperCase()}
               </h2>
               <div className="text-cyan-400 font-mono text-xs sm:text-sm font-semibold mt-1">
                 MERN Stack Developer | React.js | Next.js | Node.js | Express.js | MongoDB | TypeScript
               </div>
 
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400 font-mono mt-3">
+              <div className="flex flex-wrap items-center gap-x-3 sm:gap-x-4 gap-y-1 text-xs text-slate-400 font-mono mt-2 sm:mt-3">
                 <span className="flex items-center gap-1 text-slate-300">
                   <Mail className="w-3.5 h-3.5 text-cyan-400" />
                   {PORTFOLIO_DATA.personal.email}
@@ -103,7 +103,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
               </div>
             </div>
 
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-lg shadow-cyan-500/20 shrink-0">
+            <div className="relative w-16 h-16 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-lg shadow-cyan-500/20 shrink-0 self-start sm:self-auto">
               <Image
                 src="/sayan-photo.jpg"
                 alt="Sayan Dutta"

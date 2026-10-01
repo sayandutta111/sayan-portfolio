@@ -104,24 +104,24 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
           {/* Mobile menu trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-white/[0.05] border border-white/10 text-slate-300 hover:text-white"
+            className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center rounded-xl bg-white/[0.05] border border-white/10 text-slate-300 hover:text-white transition-colors cursor-pointer"
             aria-label="Toggle navigation menu"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-white" /> : <Menu className="w-5 h-5 text-white" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[65px] bg-[#07090e]/95 backdrop-blur-xl border-b border-white/10 p-6 shadow-2xl transition-all">
-          <div className="flex flex-col gap-2">
+        <div className="lg:hidden fixed inset-x-0 top-[65px] max-h-[calc(100vh-70px)] overflow-y-auto bg-[#07090e]/95 backdrop-blur-2xl border-b border-white/10 p-5 sm:p-6 shadow-2xl transition-all z-50">
+          <div className="flex flex-col gap-1.5">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between py-2.5 px-3 text-sm font-medium text-slate-200 hover:text-cyan-400 rounded-lg hover:bg-white/[0.05]"
+                className="flex items-center justify-between min-h-[44px] px-3.5 text-sm font-medium text-slate-200 hover:text-cyan-400 rounded-xl hover:bg-white/[0.05] transition-colors"
               >
                 <span>{link.name}</span>
                 <ChevronRight className="w-4 h-4 text-slate-500" />
@@ -134,18 +134,18 @@ export default function Navbar({ onOpenResume }: NavbarProps) {
                   setMobileMenuOpen(false);
                   onOpenResume();
                 }}
-                className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 bg-white/[0.07] border border-white/10 flex items-center justify-center gap-2"
+                className="w-full min-h-[44px] py-3 px-4 rounded-xl text-xs font-semibold text-slate-200 bg-white/[0.07] hover:bg-white/[0.12] border border-white/10 flex items-center justify-center gap-2 cursor-pointer transition-colors"
               >
                 <FileText className="w-4 h-4 text-cyan-400" />
-                View & Download Resume
+                <span>View & Download Resume</span>
               </button>
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full py-2.5 px-4 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 flex items-center justify-center gap-2"
+                className="w-full min-h-[44px] py-3 px-4 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 flex items-center justify-center gap-2 shadow-lg shadow-indigo-600/25 cursor-pointer transition-all"
               >
                 <Mail className="w-4 h-4" />
-                Get in Touch
+                <span>Get in Touch</span>
               </a>
             </div>
           </div>
