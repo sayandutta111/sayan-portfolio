@@ -177,12 +177,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   </div>
 
                   <div>
-                    <strong className="text-white block">• ECL Visitor Management System:</strong>
+                    <strong className="text-white block">• Enterprise Visitor Management System:</strong>
                     Developed responsive dashboards and forms for visitor requests, approvals, check-in/out, and host coordination. Implemented server-side API routes and NextAuth session management with SWR caching.
                   </div>
 
                   <div>
-                    <strong className="text-white block">• Fitmitra Calorie Tracker:</strong>
+                    <strong className="text-white block">• Nutrition & Calorie Tracker:</strong>
                     Developed a calorie-tracking web application with reusable UI components, food logging, calorie calculations, nutrition tracking, and dashboard views with Zustand state.
                   </div>
 
@@ -192,12 +192,12 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   </div>
 
                   <div>
-                    <strong className="text-white block">• PixelGPT AI Interface:</strong>
+                    <strong className="text-white block">• Conversational AI Interface:</strong>
                     Developed an AI-powered chat interface with dynamic typewriter markdown responses, chat history, and Zustand-based state management while preventing duplicate message rendering.
                   </div>
 
                   <div>
-                    <strong className="text-white block">• Careocure Telehealth Platform:</strong>
+                    <strong className="text-white block">• Telehealth & Therapy Platform:</strong>
                     Developed appointment scheduling, doctor/patient views, and integrated Razorpay payments and Zoom video calls with Google Analytics & GTM tracking.
                   </div>
                 </div>

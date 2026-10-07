@@ -24,19 +24,19 @@ import {
 } from "lucide-react";
 
 export default function InteractivePlayground() {
-  const [activeTab, setActiveTab] = useState<"pixelgpt" | "crm" | "fitmitra">(
-    "pixelgpt",
+  const [activeTab, setActiveTab] = useState<"ai-chat" | "crm" | "nutrition">(
+    "ai-chat",
   );
 
   // ==========================================
-  // 1. PixelGPT Streaming Simulator State
+  // 1. AI Streaming Chat Simulator State
   // ==========================================
   const [chatMessages, setChatMessages] = useState<
     Array<{ sender: "user" | "ai"; text: string }>
   >([
     {
       sender: "ai",
-      text: "👋 Hello! I am PixelGPT, an AI interface engineered by Sayan Dutta. I support streaming markdown responses, deduplication, and zero-flicker Zustand state management. Try asking me a question below!",
+      text: "👋 Hello! I am an AI interface engineered by Sayan Dutta. I support streaming markdown responses, deduplication, and zero-flicker Zustand state management. Try asking me a question below!",
     },
   ]);
   const [inputPrompt, setInputPrompt] = useState("");
@@ -46,14 +46,14 @@ export default function InteractivePlayground() {
   const chatScrollRef = useRef<HTMLDivElement>(null);
 
   const samplePrompts = [
-    "How did Sayan optimize state in PixelGPT?",
+    "How did Sayan optimize state in the AI Chat Engine?",
     "Explain Next.js App Router vs Pages Router",
     "Show a sample TypeScript Zustand slice",
   ];
 
   const simulatedResponses: Record<string, string> = {
-    "How did Sayan optimize state in PixelGPT?":
-      "In **PixelGPT**, Sayan implemented a custom chunk parser coupled with **Zustand** slice-based state management.\n\n### Key Highlights:\n- **Typewriter Markdown Streaming:** Chunks are rendered at high frame rates without triggering whole-page re-renders.\n- **Message Deduplication:** Guaranteed unique hashing on incoming stream chunks prevents duplicate message bubbles during network fluctuations.\n- **Performance:** Reduced render cycle overhead by over **65%** compared to standard React setState loops.",
+    "How did Sayan optimize state in the AI Chat Engine?":
+      "In the **AI Chat Engine**, Sayan implemented a custom chunk parser coupled with **Zustand** slice-based state management.\n\n### Key Highlights:\n- **Typewriter Markdown Streaming:** Chunks are rendered at high frame rates without triggering whole-page re-renders.\n- **Message Deduplication:** Guaranteed unique hashing on incoming stream chunks prevents duplicate message bubbles during network fluctuations.\n- **Performance:** Reduced render cycle overhead by over **65%** compared to standard React setState loops.",
 
     "Explain Next.js App Router vs Pages Router":
       "Next.js **App Router** represents a foundational shift to React Server Components (RSC):\n\n```typescript\n// Example: Server Action in Next.js 16\n'use server';\nexport async function updateRecord(id: string, formData: FormData) {\n  const session = await auth();\n  if (!session?.user) throw new Error('Unauthorized');\n  return await db.records.update(id, formData);\n}\n```\n\n### Core Advantages:\n1. Zero-bundle size for server components\n2. Built-in streaming SSR with Suspense\n3. Simplified layouts & nested route caching",
@@ -209,7 +209,7 @@ export default function InteractivePlayground() {
   };
 
   // ==========================================
-  // 3. Fitmitra Calorie & Nutrient Calculator State
+  // 3. Nutrition & Calorie Calculator State
   // ==========================================
   interface FoodItem {
     id: string;
@@ -342,15 +342,15 @@ export default function InteractivePlayground() {
           {/* Tab Selector Buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-1.5 sm:gap-2 mt-6 sm:mt-8 p-1.5 rounded-2xl bg-white/[0.03] border border-white/[0.08] backdrop-blur-md w-full sm:w-auto sm:max-w-xl mx-auto">
             <button
-              onClick={() => setActiveTab("pixelgpt")}
+              onClick={() => setActiveTab("ai-chat")}
               className={`flex items-center justify-center gap-2 min-h-[40px] px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                activeTab === "pixelgpt"
+                activeTab === "ai-chat"
                   ? "bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-lg shadow-indigo-600/25"
                   : "text-slate-400 hover:text-white hover:bg-white/[0.05]"
               }`}
             >
               <Bot className="w-4 h-4" />
-              <span>PixelGPT Simulator</span>
+              <span>AI Chat Simulator</span>
             </button>
 
             <button
@@ -366,20 +366,20 @@ export default function InteractivePlayground() {
             </button>
 
             <button
-              onClick={() => setActiveTab("fitmitra")}
+              onClick={() => setActiveTab("nutrition")}
               className={`flex items-center justify-center gap-2 min-h-[40px] px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
-                activeTab === "fitmitra"
+                activeTab === "nutrition"
                   ? "bg-gradient-to-r from-cyan-500 to-indigo-600 text-white shadow-lg shadow-indigo-600/25"
                   : "text-slate-400 hover:text-white hover:bg-white/[0.05]"
               }`}
             >
               <Activity className="w-4 h-4" />
-              <span>Fitmitra Macro Engine</span>
+              <span>Macro & Calorie Engine</span>
             </button>
           </div>
         </div>
 
-        {activeTab === "pixelgpt" && (
+        {activeTab === "ai-chat" && (
           <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl w-full min-w-0 max-w-full overflow-hidden">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/[0.08] mb-4">
               <div className="flex items-center gap-3">
@@ -388,7 +388,7 @@ export default function InteractivePlayground() {
                 </div>
                 <div>
                   <h3 className="text-sm font-semibold text-white">
-                    PixelGPT Streaming Terminal
+                    AI Streaming Assistant Terminal
                   </h3>
                   <p className="text-[10px] sm:text-[11px] text-slate-400 font-mono">
                     Simulating typewriter markdown & duplicate prevention
@@ -480,7 +480,7 @@ export default function InteractivePlayground() {
                 type="text"
                 value={inputPrompt}
                 onChange={(e) => setInputPrompt(e.target.value)}
-                placeholder="Ask PixelGPT about Sayan's architecture or Next.js patterns..."
+                placeholder="Ask about Sayan's architecture or Next.js patterns..."
                 disabled={isStreaming}
                 className="flex-1 px-4 py-2.5 rounded-xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm placeholder:text-slate-500 focus:outline-none focus:border-cyan-400 transition-colors"
               />
@@ -655,13 +655,13 @@ export default function InteractivePlayground() {
           </div>
         )}
 
-        {activeTab === "fitmitra" && (
+        {activeTab === "nutrition" && (
           <div className="max-w-4xl mx-auto rounded-3xl glass-panel border border-white/10 p-3.5 sm:p-6 shadow-2xl w-full min-w-0 max-w-full overflow-hidden">
             <div className="flex items-center justify-between pb-4 border-b border-white/[0.08] mb-5 sm:mb-6">
               <div>
                 <h3 className="text-base font-semibold text-white flex items-center gap-2">
                   <Activity className="w-4 h-4 text-emerald-400" />
-                  Fitmitra Live Macro & Calorie Engine
+                  Live Macro & Calorie Engine
                 </h3>
                 <p className="text-xs text-slate-400 font-mono mt-0.5">
                   Reactive client state simulation reflecting Sayan&apos;s
